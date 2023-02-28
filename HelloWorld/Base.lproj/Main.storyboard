@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,26 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2Q-G4-bA1">
-                                <rect key="frame" x="16" y="77" width="358" height="330"/>
-                                <color key="backgroundColor" red="0.75431599650349646" green="0.65797605714597895" blue="0.5472541125201148" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Kv-ih-U9p">
-                                <rect key="frame" x="16" y="450" width="358" height="330"/>
-                                <color key="backgroundColor" red="0.66666668650000005" green="0.59815905280000004" blue="0.48224728319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ora-vB-isg">
+                                <rect key="frame" x="90" y="155" width="210" height="42"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="34"/>
+                                <color key="textColor" red="0.89000000000000001" green="0.89000000000000001" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-62-4Yt">
+                                <rect key="frame" x="108.66666666666669" y="404" width="173" height="36"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Greeting">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhS-n3-bfC">
+                                <rect key="frame" x="169.66666666666666" y="347" width="51" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51" id="5rn-wi-QWc"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.44097599042322044" green="0.57260423526965198" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="8Kv-ih-U9p" firstAttribute="top" secondItem="B2Q-G4-bA1" secondAttribute="bottom" constant="43" id="Khb-fj-9Y8"/>
-                            <constraint firstItem="B2Q-G4-bA1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OEc-11-fZB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Kv-ih-U9p" secondAttribute="trailing" constant="16" id="R23-cR-YZ2"/>
-                            <constraint firstItem="8Kv-ih-U9p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Z3v-Ln-iPM"/>
-                            <constraint firstItem="B2Q-G4-bA1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="cH6-wJ-crz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Kv-ih-U9p" secondAttribute="bottom" constant="30" id="mpF-b4-l5u"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B2Q-G4-bA1" secondAttribute="trailing" constant="16" id="oBd-sp-DND"/>
-                            <constraint firstItem="B2Q-G4-bA1" firstAttribute="height" secondItem="8Kv-ih-U9p" secondAttribute="height" id="zOF-xE-h62"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ora-vB-isg" secondAttribute="trailing" constant="90" id="AjN-Ei-sTo"/>
+                            <constraint firstItem="FhS-n3-bfC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KNK-Iw-0w0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FhS-n3-bfC" secondAttribute="bottom" constant="433" id="PMu-B9-RXe"/>
+                            <constraint firstItem="1tz-62-4Yt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WT8-3v-vKo"/>
+                            <constraint firstItem="ora-vB-isg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="b7u-rq-060"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1tz-62-4Yt" secondAttribute="bottom" constant="370" id="eBh-yF-5Ai"/>
+                            <constraint firstItem="ora-vB-isg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="108" id="xE6-yt-eYd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -44,4 +63,12 @@
             <point key="canvasLocation" x="63.076923076923073" y="-3.5545023696682461"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
