@@ -23,17 +23,6 @@
                                 <color key="textColor" red="0.89000000000000001" green="0.89000000000000001" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-62-4Yt">
-                                <rect key="frame" x="108.66666666666669" y="404" width="173" height="36"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show Greeting">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhS-n3-bfC">
                                 <rect key="frame" x="169.66666666666666" y="347" width="51" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
@@ -44,6 +33,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="greetingButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="nMi-a9-wfV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -51,12 +43,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ora-vB-isg" secondAttribute="trailing" constant="90" id="AjN-Ei-sTo"/>
                             <constraint firstItem="FhS-n3-bfC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KNK-Iw-0w0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FhS-n3-bfC" secondAttribute="bottom" constant="433" id="PMu-B9-RXe"/>
-                            <constraint firstItem="1tz-62-4Yt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WT8-3v-vKo"/>
                             <constraint firstItem="ora-vB-isg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="b7u-rq-060"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1tz-62-4Yt" secondAttribute="bottom" constant="370" id="eBh-yF-5Ai"/>
                             <constraint firstItem="ora-vB-isg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="108" id="xE6-yt-eYd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingButton" destination="FhS-n3-bfC" id="mGb-pD-bHZ"/>
+                        <outlet property="greetingLabel" destination="ora-vB-isg" id="XxO-VZ-h58"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
